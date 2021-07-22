@@ -1,0 +1,122 @@
+body{
+  margin:0;
+  padding:0;
+  font-family: Century Gothic;
+
+
+}
+header{
+	position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100vh;
+				background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/images/bulb.jpg);
+				background-repeat: no-repeat;
+            background-size: cover;
+}
+ul{
+   float:right;
+   list-style-type:none;
+   margin-top:25px;
+}
+ul li{
+  display: inline-block;
+}
+ul li a{
+    text-decoration:none;
+    color:#fff;
+    padding:5px 20px;
+    border: 1px solid transparent;
+    transition:0.6s ease;
+}
+ul li a:hover{
+   background-color:#C1D82F;
+   color:#000;
+}
+ul li.active a{
+background-color:#fff;
+   color:#000;
+}
+.logo img{
+   float:left;
+   width: 120px;
+   height:auto;
+}
+.main{
+  max-width:1200px;
+  margin:fixed;
+  
+}
+
+.title{
+   position: absolute;
+   top: 50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+}
+.title h1{
+   color:#C1D82F;
+   font-size:30px;
+
+}
+.button{
+  position: absolute;
+   top: 75%;
+   left:40%;
+   transform: translate(-50%,-50%);
+}
+.button1 {
+  position: absolute;
+   top: 75%;
+   left:60%;
+   transform: translate(-50%,-50%);
+}
+.btn{
+   border:1px solid #fff;
+   padding: 10px 30px;
+   color:#fff;
+   text-decoration:none;
+  transition:0.6s ease;
+}
+
+.btn:hover{
+   background-color:#C1D82F;
+   color:#000;
+}
+
+	
+.slider {
+	position:fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100vh;
+				animation: animate 20s ease-in-out infinite;
+				background-size: cover;
+			overflow:hidden;
+    
+			
+}
+.load{
+	animation:slide 30;
+	}
+ @keyframes animate{
+	0%,60%{
+		
+		 background-image:url("/images/people.jpg");
+		}
+	15%{
+	 
+		background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/images/balloon.jpg");
+	}
+     30%{
+	
+		 background-image:url("board.jpg");
+		}
+	45%{
+	
+		 background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/images/potential.jpg");
+		
+	}
+ }

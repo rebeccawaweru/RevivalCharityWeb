@@ -1,0 +1,70 @@
+<html lang="en">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="create-activity-button">
+  <a href="activity.html" class="btn" >Create Activity</a>
+  </div>
+
+<link rel="stylesheet" type="text/css" href="vol.css">
+<form method="post" action="//submit.form" onSubmit="return validateForm();">
+<div style="max-width:400px; top: 50%; left:50%;">
+</div>
+<div style="display: flex; padding-bottom: 18px;max-width : 450px;position: relative;margin-left:auto; margin-right:auto; margin-top: 200px;">
+<div style="padding-bottom: 18px;font-size : 24px; ">Volunteer Registration</div>
+</div>
+
+<div style="display: flex; padding-bottom: 18px;max-width : 450px;position: relative;margin-left:auto; margin-right:auto;">
+<div style=" margin-left: 0; margin-right: 1%; max-width: 49%;">First name<span style="color: red;"> *</span><br/>
+<input type="text" id="data_2" name="data_2" style="max-width: 100%;" class="form-control" required />
+</div>
+<div style=" margin-left: 1%; margin-right: 0; max-width: 49% ;">Last name<span style="color: red;"> *</span><br/>
+<input type="text" id="data_3" name="data_3" style="max-width: 100%;" class="form-control" required />
+</div>
+</div>
+<div style="display: flex; padding-bottom: 18px;max-width : 450px;position: relative;margin-left:auto; margin-right:auto;">
+<div style="padding-bottom: 18px;">Email<br/>
+<input type="text" id="data_4" name="data_4" style="max-width : 450px;" class="form-control" required />
+</div>
+</div>
+<div style="display: flex; padding-bottom: 18px;max-width : 450px;position: relative;margin-left:auto; margin-right:auto;">
+<div style="padding-bottom: 18px;">Mobile phone<br/>
+<input type="text" id="data_5" name="data_5" style="max-width : 250px;" class="form-control" required />
+</div>
+</div>
+
+</div>
+<div style="display: flex; padding-bottom: 18px;max-width : 450px;position: relative;margin-left:auto; margin-right:auto;">
+<div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit." type="submit"/> <p><i> You will receive email notification on new activities within your community. </i></p></div>
+
+</div>
+<div style="display: flex; padding-bottom: 18px;max-width : 450px;position: relative;margin-left:auto; margin-right:auto;">
+<div>
+<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+<script src="https://www.100forms.com/js/FORMKEY:X3UW58MQZBNW/SEND:wawerur95@gmail.com" type="text/javascript"></script>
+</div>
+</div>
+</form>
+
+<script type="text/javascript">
+function validateForm() {
+if (isEmpty(document.getElementById('data_2').value.trim())) {
+alert('First name is required!');
+return false;
+}
+if (isEmpty(document.getElementById('data_3').value.trim())) {
+alert('Last name is required!');
+return false;
+}
+if (!validateEmail(document.getElementById('data_4').value.trim())) {
+alert('Email must be a valid email address!');
+return false;
+}
+return true;
+}
+function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+function validateEmail(email) {
+var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+return isEmpty(email) || re.test(email);
+}
+</script>
+</html>

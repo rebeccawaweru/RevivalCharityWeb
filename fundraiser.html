@@ -1,0 +1,131 @@
+ <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create Fundraiser</title>
+        <link rel="stylesheet" href="css/fund.css">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid ">
+          <span class="navbar-brand mb-0 h1" id="display"></span>
+          <ul id="list">
+              <li><a href="userDashboard.html" active>Home</a></li>
+
+              <a href="activity.html"><li>Register Activity</li></a>
+              <li><a href="fundraiser.html">My Fundraisers</a></li>
+              <li><button id="signOut">Sign Out</button> </li>
+          </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Register Activity</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Register Fundraiser</a>
+              </li>
+              <li class="nav-item">
+              <button id="signOut">Sign Out</button> 
+              </li>
+            </ul>
+          </div>
+          <!-- collapse menu -->
+        </div>
+       
+
+      </nav>
+      <div class="form">
+        <div id="filling">
+        <h1>Register an Online Fundraiser</h1>
+          <div class="mb-3">
+            <label for="fundname" class="form-label">Fundraiser</label>
+            <input type="text" class="form-control" id="fundname" aria-describedby="fundraiser" placeholder="name of your fundraiser" required>  
+          </div>
+          
+          <div class="mb-3">
+          <label for="name" class="form-label">Email</label>
+          <input type="text" class="form-control" id="email" name="email" required placeholder= username@email.com>
+        </div>
+
+        <div class="mb-3">
+          <label for="purpose">Purpose:</label>
+          <input type="text" class="form-control" id="purpose" name="purpose" required  placeholder='Why are you starting this fundraiser?'>
+        </div>
+
+     <div class="mb-3">
+       <label for="fundraiser_type">Fundraiser Type</label>
+		  <select name="fundraiser_type" class="form-control"  id="fundtype" required>
+    <option value="">Select your fundraiser/Cause type</option>
+		 <option value="Health">Health</option>
+		<option value="Education">Education</option>
+		<option value="Religious">Religious</option>
+		<option value="Wedding">Wedding</option>
+		<option value="Funeral">Funeral</option>
+		<option value="Civil Society">Civil Society</option>
+		<option value="Business">Business</option>
+		<option value="Other">Other</option>
+		</select>
+  </div>
+
+  <div class="mb-3">
+		  <label for="duration">Fundraiser Duration </label>
+          <select name="fundraiser_duration" class="form-control" id="duration" required>
+		<option value="">Set fundraiser duration</option>
+		<option value="15">15 Days</option>
+		<option value="30">30 Days</option>
+		<option value="45">45 Days</option>
+		<option value="60">60 Days</option>
+		<option value="90">90 Days</option>
+		</select>
+  </div>
+
+      <div class="mb-3">
+		  <label for="target">Target Amount  </label>
+          <input type="currency" id="target" name="target" placeholder='Ksh'/>
+		    </div>
+		  
+        <div class="mb-3">
+		  <label for="contact">Contact number </label>
+          <input type="number" id="phone" name="phone" required placeholder="07********" />
+        </div>
+
+        <div class="mb-3">  
+		 <label for="details">Transaction details</label>
+          <input type="text" id="transactiondetails" name="transactiondetails" required placeholder= 'include paybill or phone number to send funds'>
+        </div>	
+
+        <button type="submit" class="btn-outline-success" id="fundraiser">Submit</button>
+        <button type="submit" style="display:none;" class="btn-outline-success" id="update">Update</button>
+      </div>
+
+        <div style="display: none;" id="details" class="mt-5">
+          <h4 style="color: green;">Fundraiser Information</h4>
+         Name: <p id="fundraisername"></p>
+         Email: <p id="fundraiseremail"></p>
+         Purpose: <p id="purposeemail"></p>
+         Type: <p id="fundraisertype"></p>
+         Duration: <p id="fundraiserduration"></p>
+         Target: <p id= "fundraisertarget"></p>
+         Phone:  <p id="fundraiserphone"></p>
+         Transaction: <p id="fundraisertransaction"></p>
+          <!-- <button type="submit" class="btn-outline-success" id=""></button> -->
+          <button type="submit" class="btn-outline-success" id="edit">Edit</button>
+        </div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+
+<script src = "js/firebase.js"></script>
+<script src="js/fundraiser.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>

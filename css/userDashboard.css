@@ -1,0 +1,56 @@
+*{
+padding: 0px !important;
+
+} 
+
+.container{
+    max-width: 100% !important;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.navbar{
+align-items: center;
+position: absolute;
+height: 8vh;
+
+}
+
+ul{
+    display: flex;
+    margin-right: 20px !important;
+}
+
+li{
+    list-style: none;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.navbar-toggler{
+    display: none;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+
+a:active{
+    color: green !important;
+}
+
+
+/* responsive navbar */
+@media only screen and (max-width: 600px) {
+    .navbar-toggler{
+        display: block;
+        margin-right: 20px !important;
+    }
+    #list{
+        display: none !important;
+    }
+    .navbar{
+        height: 25vh !important;
+     
+    }
+}

@@ -1,0 +1,40 @@
+
+
+.form{
+  height: 90vh;
+  width: 70%;
+  color: black;
+  margin: auto !important;
+  margin-top: 50px !important;
+  background: #f4f7f8;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+
+}
+a{
+  text-decoration: none !important;
+}
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+  color:#C1D82F;
+   font-size:30px;
+}
+
+.navbar-toggler{
+  display: none;
+}
+
+ul{
+  display: flex;
+}
+
+li{
+  display: inline;
+  list-style: none;
+  justify-content: space-around;
+  margin-right: 20px;
+  text-decoration: none;
+}
+

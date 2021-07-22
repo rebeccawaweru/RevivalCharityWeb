@@ -1,0 +1,55 @@
+*{
+padding: 0px !important;
+
+}*
+body{
+text-align: center;
+align-items: center;
+background-image:linear-gradient(rgba(0,0.5,0.5,0.0),rgba(0,0,0,0.0)),url("/images/team.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh !important;
+width: 100% !important;
+
+}
+.container{
+    box-shadow: 10px 15px 5px red;
+    height:50vh;
+   width: 40% !important;
+   border: solid 2px black;
+   margin-top: 10%;
+   color: black;
+   padding-right: 5% !important;
+   padding-left: 5% !important;
+   padding-top: 5% !important;
+}
+.form-text{
+    color: black !important;
+    font-weight: bold !important;
+}
+
+/* responsiveness */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container{
+        height: 100vh !important;
+        width: 50% !important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container{
+        height: 70vh !important;
+        width: 70% !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .container{
+        height: 60vh !important;
+        width: 70% !important;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
