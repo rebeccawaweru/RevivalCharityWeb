@@ -3,7 +3,7 @@ firebase.auth().onAuthStateChanged((user) => {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
       var uid = user.uid;
-
+       console.log (user)
       // ...
       //log out
       document.getElementById('signOut').onclick = () =>{
@@ -15,8 +15,8 @@ firebase.auth().onAuthStateChanged((user) => {
           });
     }
 
-      //pull username from user collection
-    firebase.firestore().collection("users").where("uid", "==", doc.id)
+      //pull current  username from user collection
+    firebase.firestore().collection("users")
     .get()
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
@@ -24,6 +24,7 @@ firebase.auth().onAuthStateChanged((user) => {
             // doc.data() is never undefined for query doc snapshots
             console.log(doc.id, " => ", doc.data());
             const displayName = doc.data().Username;
+              
                 document.getElementById('display').innerHTML = displayName; 
             
             
